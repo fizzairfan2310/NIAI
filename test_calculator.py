@@ -1,4 +1,4 @@
-from calculator import add, subtratct
+from calculator import add, subtract, subtratct
 
 
 def test_add():
@@ -8,7 +8,6 @@ def test_add():
 
 
 def test_subtract():
-    assert subtratct(5, 3) == 2
-    assert subtratct(1, 1) == 0
-    assert subtratct(0, 0) == 0
-    
+    assert subtract(5, 3) == 2
+    assert subtract(1, 1) == 0
+    assert subtract(0, 0) == 0
