@@ -1,17 +1,21 @@
-name : Pyhton application
-on: push:
-    pull request:
+name: Python application
+
+on:
+  push:
+  pull_request:
+
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v5
         with:
-          python-version: 3.8
+          python-version: "3.8"
 
       - name: Install dependencies
         run: |
@@ -24,4 +28,5 @@ jobs:
           pytest
 
       - name: Run Flake8 (Code Linting)
-        run: flake8 . --max-line-length=88
+        run: |
+          flake8 . --max-line-length=88
