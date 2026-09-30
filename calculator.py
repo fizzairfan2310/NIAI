@@ -2,5 +2,5 @@ def add(a, b):
     return a + b
 
 
-def subtratct(a, b):
+def subtract(a, b):
     return a - b
